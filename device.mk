@@ -191,6 +191,15 @@ PRODUCT_PACKAGES += \
     libmm-qcamera \
     Snap
 
+# Sensor & activity_recognition HAL
+PRODUCT_PACKAGES += \
+    sensors.msm8916 \
+    activity_recognition.ferrari
+ 
+# Multi HAL configuration file
+PRODUCT_COPY_FILES += \
+    device/xiaomi/ferrari/hals.conf:system/etc/sensors/hals.conf
+
 # lights
 PRODUCT_PACKAGES += \
     lights.msm8916
